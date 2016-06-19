@@ -1,0 +1,43 @@
+.l-homepage {
+
+  .information-banner {
+    text-align: center;
+
+    .content {
+      display: inline-block;
+      padding: 40px 0 20px 0;
+      color: $color-5;
+      text-align: center;
+      background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAxNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+cGhvbmUtaWNvbjwvdGl0bGU+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMSAxKSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMCAyMFYyYzAtMSAuODU3LTIgMS43MTQtMmg4LjU3MkMxMS4xNDMgMCAxMiAxIDEyIDJ2MThjMCAxLS44NTcgMi0xLjcxNCAySDEuNzE0Qy44NTcgMjIgMCAyMSAwIDIweiIgc3Ryb2tlPSIjMTFBM0VCIi8+PGNpcmNsZSBmaWxsPSIjMTFBM0VCIiBjeD0iNiIgY3k9IjE5IiByPSIxIi8+PC9nPjwvc3ZnPg==") no-repeat;
+      background-position: top 10px center;
+
+      @media $(mq-laptop) {
+        padding: 20px 35px;
+        background-position: left center;
+      }
+
+      a {
+        display:  inline-block;
+        position: relative;
+
+        &:after {
+          content: '';
+          display:  block;
+          position: absolute;
+          top: calc(50% + 1px);
+          right: -10px;
+          width:  8px;
+          height: 8px;
+          border-width: 2px;
+          border-color: $color-1;
+          border-radius: 1px;
+          border-right-style:  solid;
+          border-bottom-style: solid;
+          transform: translateY(-50%) rotate(-45deg);
+        }
+      }
+    }
+  }
+
+
+}
