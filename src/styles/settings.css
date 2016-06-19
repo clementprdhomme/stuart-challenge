@@ -8,7 +8,8 @@ $wrapper-mobile-padding:   15px;
 $font-family-1: "Open Sans", sans-serif;
 
 /* Font sizes */
-$font-size-small:    12px;
+$font-size-x-small:  12px;
+$font-size-small:    14px;
 $font-size-normal:   16px;
 $font-size-medium:   20px;
 $font-size-x-medium: 22px;
@@ -33,15 +34,18 @@ $color-7:  #8F96A0;
 $color-8:  #D2D9DC;
 $color-9:  #F0F3F7;
 $color-10: #FFFFFF;
+$color-11: #25BDFC;
 
 /* Breakpoints */
-$breakpoint-mobile:  425px;
-$breakpoint-tablet:  768px;
-$breakpoint-laptop: 1024px;
+$breakpoint-mobile:        425px;
+$breakpoint-tablet-small:  600px;
+$breakpoint-tablet:        768px;
+$breakpoint-laptop:       1024px;
 
 /* Media queries */
-$mq-mobile: screen and (width >= $breakpoint-mobile);
-$mq-tablet: screen and (width >= $breakpoint-tablet);
-$mq-laptop: screen and (width >= $breakpoint-laptop);
+$mq-mobile:       screen and (width >= $breakpoint-mobile);
+$mq-tablet-small: screen and (width >= $breakpoint-tablet-small);
+$mq-tablet:       screen and (width >= $breakpoint-tablet);
+$mq-laptop:       screen and (width >= $breakpoint-laptop);
 
 $mq-wrapper-width: screen and (width >= calc($wrapper-max-width + 2 * $wrapper-padding));
