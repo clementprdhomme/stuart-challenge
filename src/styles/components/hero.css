@@ -6,10 +6,17 @@
   background: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAYEBQf/xAApEAABAgUCAwkAAAAAAAAAAAADAQIABAURIRIjBjFBFSIzQ2JygZHB/8QAFAEBAAAAAAAAAAAAAAAAAAAAAv/EABwRAAICAgMAAAAAAAAAAAAAAAABAhESkUFRYf/aAAwDAQACEQMRAD8AT+KZWWm5qTm5cwlcKXGhGOu1Sbbe9nrzwsQKPTmVClyj5kgxIjdRCK1NRPS3FtXW2OUaQHxCfH7FdUVXtEefLvDtIOL7FZ9CprSktUxI1XXbuql0+oIegrsj9qQQMIvl7HcvNH//2Q==") no-repeat;
   background-position: left center;
   background-size: cover;
+  overflow: hidden;
 
   @media $(mq-mobile) {
     background-position: center center;
     height: 600px;
+  }
+
+  @media $(mq-tablet) {
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAKCAIAAADOyWIBAAACXklEQVR4ARVQU6IsRxj+yz1dPT2e2LZtbyKbOZvJa/wW3zhPsXNstntKf+qW+YncdvttZVE4f7kowZBx3D987Fp1waYHyZAH50MAIDfMs1uuXSol907KojWSg6RY1O364UXXGxfCzdcsOOOUUACPhGCqxPr24dqbz77x7EP/bJ+svfUNSE4xgmGSKMaZR0AmCIcAPqBLlMj1oFtZQgAQOWJ86ykBKTjSiIpPP37ftddfpcfjB29f/+LPw0UqW2MjlZARTmaaOFw5Z7JEpokQalB3tqiqiE29RwKEUhKrYhGf/Pnf9vl5sblzuHXcXJGnQAinbOXQxJeMqUQpJUlcCcm4kLFyHm/jT6Z0hsFGNMZYoHySZ+0ff21u7r3z1d+FyAZKeh8pcZCooU6FlAgsRmiMbbsVZ2B8X9T11ctkMmacBCs5iVDosYPwCjX3TCarljw8VOtpuucJWgsufofeoorbSEuAUazaHqF0UFNqPMrGrHjvAgMUHCL9UVOlWQh8BG0tLrYX6fXX5NpJdmlFrPfG+ZUxAeGiNucXNYeu76hBtAZXl+MXfJlLySAgiYw6T9qhaq5c6Pl0MntJnl8cv/ehvPb62rJEOdN3f58c5Im595YbT/Pxxz9sUhDTjP/+5yEAu/rGnF+zGCaSIEJsAegxgtD6qTtvWi4We7sHf80HPePO2cg2HKhxvlymZ1dn5SP33H7PzeON7UM9EC8/ekPR2L+3SjabjQmAddjbYK2z1ishZqOMENodbUl+Pp0M7lpIrRMi9HiYQSA//LSze3QWvwy1Rh+kVHGRZ6P/AaDlTMGFCasUAAAAAElFTkSuQmCC") no-repeat;
+    background-size: cover;
+    background-position: center center;
   }
 
   .background-image {
@@ -22,6 +29,31 @@
 
     @media $(mq-mobile) {
       width:  100%;
+      object-fit: cover;
+    }
+
+    @media $(mq-tablet) {
+      display: none;
+    }
+
+    &.-loaded { opacity: 1; }
+  }
+
+  .background-video {
+    display: none;
+    opacity: 0;
+    transition: opacity .3s ease-out;
+
+    @media $(mq-tablet) {
+      display:  block;
+      position: absolute;
+      top:  0;
+      left: 0;
+      width:  100%;
+      /* The next two properties are used to hide the black bars from the video
+       * as it's not correctly cropped */
+      height: 138.46%;
+      transform: translateY(-13.89%);
       object-fit: cover;
     }
 

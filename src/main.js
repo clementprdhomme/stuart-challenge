@@ -3,6 +3,7 @@ var mobileMenuButton = document.querySelector('.js-mobile-menu');
 var mobileDrawer     = document.querySelector('.js-mobile-drawer');
 var menuDropdowns    = document.querySelectorAll('.js-menu-dropdown');
 var lazyLoadedImgs   = document.querySelectorAll('img[data-src]');
+var lazyLoadedVideos = document.querySelectorAll('video[data-src]');
 
 /* Global variables */
 var openDropdowns = [];
@@ -55,4 +56,17 @@ document.body.addEventListener('click', closeDropdowns);
 /* General code */
 Array.prototype.slice.call(lazyLoadedImgs).forEach(function(lazyLoadedImg) {
   lazyLoadedImg.src = lazyLoadedImg.getAttribute('data-src');
+});
+
+Array.prototype.slice.call(lazyLoadedVideos).forEach(function(lazyLoadedVideo) {
+  if(window.innerWidth >= 768) {
+    lazyLoadedVideo.src = lazyLoadedVideo.getAttribute('data-src');
+    if(lazyLoadedVideo.getAttribute('data-autoplay') !== null) {
+      lazyLoadedVideo.load();
+      lazyLoadedVideo.addEventListener('canplaythrough', function() {
+        lazyLoadedVideo.classList.add('-loaded');
+        lazyLoadedVideo.play();
+      });
+    }
+  }
 });
