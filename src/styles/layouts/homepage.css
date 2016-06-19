@@ -1,4 +1,5 @@
 .l-homepage {
+  padding-bottom: 40px;
 
   .information-banner {
     text-align: center;
@@ -39,5 +40,74 @@
     }
   }
 
+  .why-stuart {
+    margin-top: 90px;
+    text-align: center;
+
+    > .cards {
+      margin: 0 -$wrapper-mobile-padding;
+      margin-top: 50px;
+
+      @media $(mq-mobile) {
+        margin: 0 -$wrapper-tablet-padding;
+        margin-top: 50px;
+      }
+
+      @media $(mq-tablet-small) {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        margin-top: 50px;
+        > div { flex-basis: calc(50% - 10px); }
+      }
+
+      .hero-sme {
+        background: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKABMDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAYHBf/EACgQAAEDAwIDCQAAAAAAAAAAAAECAwQABREGEhMhQSIkMVFxgZGT0f/EABYBAQEBAAAAAAAAAAAAAAAAAAQAA//EABkRAQADAQEAAAAAAAAAAAAAAAEAAhESIf/aAAwDAQACEQMRAD8AlmlGLTdrkZL7k4XGOhUpEba2pt7hgdkbuuSMdOVa7lrm6mzdWChoSFKwhXLABwD74zSvLZaiXp9MVtDCUtEgNpCcc0+XqfmmuySX2LXGQy+62hLaQEoWQBR7LR0iR7MZWdLzY0CwQYs4kyWm9rhSnIJz40VNVT5eT3qR9h/aKzLsvJ//2Q==") no-repeat;
+        background-position: left center;
+        background-size: cover;
+      }
+
+      .hero-corporate {
+        background: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKABMDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAUDBgf/xAAhEAACAgICAgMBAAAAAAAAAAABAwIRAAQFIRITIjGRUf/EABUBAQEAAAAAAAAAAAAAAAAAAAID/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAERIRL/2gAMAwEAAhEDEQA/AMZ3tbjNxk266AlIlflLsmNgfpN1iHXinW5xSWTmvWnOrVUpGBPQo9WaH3jTj2snuaipzlJfoZ8CbHQ66yL1wU0SVCMJCiDEVRsZFZUXexjbYVCbpyVq8x4X1aUE/pwytue4uYS1hPkfuR/uGDhCp//Z") no-repeat;
+        background-position: left center;
+        background-size: cover;
+      }
+    }
+  }
+
+  .github-link {
+    position: relative;
+    display:  inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 50px;
+    font-size: $font-size-medium;
+    text-align: center;
+    color: $color-2;
+
+    @media $(mq-mobile) {
+      font-size: $font-size-big;
+    }
+
+    &:after {
+      content: none;
+
+      @media $(mq-tablet-small) {
+        content: '';
+        display:  block;
+        position: absolute;
+        top: calc(50% + 3px);
+        right: -25px;
+        width:  8px;
+        height: 8px;
+        border-width: 2px;
+        border-color: $color-2;
+        border-radius: 1px;
+        border-right-style:  solid;
+        border-bottom-style: solid;
+        transform: translateY(-50%) rotate(-45deg);
+      }
+    }
+  }
 
 }

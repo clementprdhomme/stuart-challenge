@@ -1,5 +1,14 @@
 .c-title {
+  font-size:   $font-size-big;
   font-weight: $font-weight-normal;
+  color: $color-5;
+
+  @media $(mq-mobile) {
+    font-size: $font-size-huge;
+    margin: 20px 0;
+  }
+
+  &.-inverse { color: $color-10; }
 
   &.-big {
     font-size: $font-size-x-big;
