@@ -2,6 +2,7 @@
   position: relative;
   padding-top: 15px;
   color: $color-10;
+  z-index: 5;
 
   @media $(mq-mobile) {
     padding-top: 20px;

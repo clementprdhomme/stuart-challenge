@@ -1,0 +1,55 @@
+.c-hero {
+  position: relative;
+  height: 440px;
+  margin-top:  -60px;
+  padding-top:  80px;
+  background: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAYEBQf/xAApEAABAgUCAwkAAAAAAAAAAAADAQIABAURIRIjBjFBFSIzQ2JygZHB/8QAFAEBAAAAAAAAAAAAAAAAAAAAAv/EABwRAAICAgMAAAAAAAAAAAAAAAABAhESkUFRYf/aAAwDAQACEQMRAD8AT+KZWWm5qTm5cwlcKXGhGOu1Sbbe9nrzwsQKPTmVClyj5kgxIjdRCK1NRPS3FtXW2OUaQHxCfH7FdUVXtEefLvDtIOL7FZ9CprSktUxI1XXbuql0+oIegrsj9qQQMIvl7HcvNH//2Q==") no-repeat;
+  background-position: left center;
+  background-size: cover;
+
+  @media $(mq-mobile) {
+    background-position: center center;
+    height: 600px;
+  }
+
+  .background-image {
+    position: absolute;
+    top:  0;
+    left: 0;
+    height: 100%;
+    opacity: 0;
+    transition: opacity .3s ease-out;
+
+    @media $(mq-mobile) {
+      width:  100%;
+      object-fit: cover;
+    }
+
+    &.-loaded { opacity: 1; }
+  }
+
+  .content {
+    position: absolute; /* If removed, the content appears behind the image */
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    font-size: $font-size-x-medium;
+    color: $color-10;
+    text-align: center;
+
+    @media $(mq-mobile) {
+      font-size: $font-size-big;
+    }
+
+    a {
+      display: block;
+      max-width: 200px;
+      margin: 40px auto 0 auto;
+
+      @media $(mq-mobile) {
+        max-width: 250px;
+      }
+    }
+  }
+}

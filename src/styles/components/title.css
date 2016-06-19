@@ -1,0 +1,13 @@
+.c-title {
+  font-weight: $font-weight-normal;
+
+  &.-big {
+    font-size: $font-size-x-big;
+    margin: 15px 0;
+
+    @media $(mq-mobile) {
+      font-size: $font-size-x-huge;
+      margin: 20px 0;
+    }
+  }
+}
