@@ -74,7 +74,7 @@
     background-color: $color-9;
     padding-top: 30px;
     color: $color-6;
-    overflow: scroll;
+    overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     box-shadow: 1px 0 1px 0 rgba($color-5, .2);
 
