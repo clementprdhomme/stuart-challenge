@@ -15,6 +15,7 @@ Below, I'll explain how I achieved solid performance for all the animated elemen
 ### 60 FPS performance 💪
 
 To understand the impact of animating DOM elements, you must understand the three steps the browser goes through in order to render the page:
+
 1. **Layout**: it computes the position of the elements
 2. **Paint**: it fills each pixel with the color
 3. **Composite**: it composes the different layers
@@ -32,6 +33,7 @@ Furthermore, to even do better, we can limit the layout and paint computations t
 ### Fast loading 🏎💨
 
 In order to have quicker page load, we have three main pivotal actions:
+
 1. reducing the **file sizes**
 2. reducing the **number of requests**
 3. improving the **perception of performance**
